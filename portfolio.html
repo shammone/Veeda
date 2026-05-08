@@ -128,18 +128,16 @@ nav{
 }
 .video-item iframe{
   width:100%;height:100%;border:none;display:block;
-  pointer-events:none;
 }
-.video-item:hover iframe{pointer-events:auto}
 .video-overlay{
   position:absolute;inset:0;
-  background:rgba(46,22,8,0.5);
+  background:rgba(46,22,8,0.4);
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   gap:0.5rem;cursor:pointer;
   transition:opacity 0.3s;
+  overflow:hidden;
 }
-.video-item:hover .video-overlay{opacity:0}
 .play-btn{
   width:3.5rem;height:3.5rem;border-radius:50%;
   background:rgba(201,169,110,0.9);
@@ -382,67 +380,67 @@ footer{
   </div>
 
   <div class="video-grid">
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/1Bv0IqGZq6vC1nqyUKmZIvojopWDnDTpQ_6SkVC2VpxU/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — Her Friends Smile</span>
+    <div class="video-item" id="vi-1Bv0IqGZ">
+      <div class="video-overlay" onclick="playVideo('1Bv0IqGZq6vC1nqyUKmZIvojopWDnDTpQ_6SkVC2VpxU', 'vi-1Bv0IqGZ')">
+        <img src="https://drive.google.com/thumbnail?id=1Bv0IqGZq6vC1nqyUKmZIvojopWDnDTpQ_6SkVC2VpxU&sz=w600" alt="Scene — Her Friends Smile" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — Her Friends Smile</span>
       </div>
     </div>
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/1IqXcNX8lMtt60qgZSyJlrd8w3rTSN4-2AGB0HdwHKmk/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — Kunle Slight Lean</span>
+    <div class="video-item" id="vi-1IqXcNX8">
+      <div class="video-overlay" onclick="playVideo('1IqXcNX8lMtt60qgZSyJlrd8w3rTSN4-2AGB0HdwHKmk', 'vi-1IqXcNX8')">
+        <img src="https://drive.google.com/thumbnail?id=1IqXcNX8lMtt60qgZSyJlrd8w3rTSN4-2AGB0HdwHKmk&sz=w600" alt="Scene — Kunle Slight Lean" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — Kunle Slight Lean</span>
       </div>
     </div>
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/1Tamx4VmQQy9YnUBP0kuDyDh2Qggrf7HvoMV39sLMeVw/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — Angled Shot</span>
+    <div class="video-item" id="vi-1Tamx4Vm">
+      <div class="video-overlay" onclick="playVideo('1Tamx4VmQQy9YnUBP0kuDyDh2Qggrf7HvoMV39sLMeVw', 'vi-1Tamx4Vm')">
+        <img src="https://drive.google.com/thumbnail?id=1Tamx4VmQQy9YnUBP0kuDyDh2Qggrf7HvoMV39sLMeVw&sz=w600" alt="Scene — Angled Shot" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — Angled Shot</span>
       </div>
     </div>
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/16ESH24biP3Ynbi2mff5lnDwB8Ec__ZHNuj-mXZl3wks/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — Quietly Observing</span>
+    <div class="video-item" id="vi-16ESH24b">
+      <div class="video-overlay" onclick="playVideo('16ESH24biP3Ynbi2mff5lnDwB8Ec__ZHNuj-mXZl3wks', 'vi-16ESH24b')">
+        <img src="https://drive.google.com/thumbnail?id=16ESH24biP3Ynbi2mff5lnDwB8Ec__ZHNuj-mXZl3wks&sz=w600" alt="Scene — Quietly Observing" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — Quietly Observing</span>
       </div>
     </div>
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/1-8o9H2HEjydEc_NYtrIP6CC5oprlgjs7BNVvsO9pzk4/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — Speaking Calmly</span>
+    <div class="video-item" id="vi-1-8o9H2H">
+      <div class="video-overlay" onclick="playVideo('1-8o9H2HEjydEc_NYtrIP6CC5oprlgjs7BNVvsO9pzk4', 'vi-1-8o9H2H')">
+        <img src="https://drive.google.com/thumbnail?id=1-8o9H2HEjydEc_NYtrIP6CC5oprlgjs7BNVvsO9pzk4&sz=w600" alt="Scene — Speaking Calmly" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — Speaking Calmly</span>
       </div>
     </div>
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/18eJwvMRDHJqVZFTmo62lcgVXi4QfQON7a_hu1v4EnO4/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — Brief Exchange</span>
+    <div class="video-item" id="vi-18eJwvMR">
+      <div class="video-overlay" onclick="playVideo('18eJwvMRDHJqVZFTmo62lcgVXi4QfQON7a_hu1v4EnO4', 'vi-18eJwvMR')">
+        <img src="https://drive.google.com/thumbnail?id=18eJwvMRDHJqVZFTmo62lcgVXi4QfQON7a_hu1v4EnO4&sz=w600" alt="Scene — Brief Exchange" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — Brief Exchange</span>
       </div>
     </div>
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/1yRhadhaj-lhIFbseisvEQnwNlwl5rF0bHFEp8cxCnLo/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — Generated Sequence</span>
+    <div class="video-item" id="vi-1yRhadha">
+      <div class="video-overlay" onclick="playVideo('1yRhadhaj-lhIFbseisvEQnwNlwl5rF0bHFEp8cxCnLo', 'vi-1yRhadha')">
+        <img src="https://drive.google.com/thumbnail?id=1yRhadhaj-lhIFbseisvEQnwNlwl5rF0bHFEp8cxCnLo&sz=w600" alt="Scene — Generated Sequence" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — Generated Sequence</span>
       </div>
     </div>
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/1AigVtHl-S1ajOUKoDHt7Dl0TQr2Ef7o1D0Ixk5VH408/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — While She Looks Away</span>
+    <div class="video-item" id="vi-1AigVtHl">
+      <div class="video-overlay" onclick="playVideo('1AigVtHl-S1ajOUKoDHt7Dl0TQr2Ef7o1D0Ixk5VH408', 'vi-1AigVtHl')">
+        <img src="https://drive.google.com/thumbnail?id=1AigVtHl-S1ajOUKoDHt7Dl0TQr2Ef7o1D0Ixk5VH408&sz=w600" alt="Scene — While She Looks Away" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — While She Looks Away</span>
       </div>
     </div>
-    <div class="video-item">
-      <iframe src="https://drive.google.com/file/d/1P2hQhQPjI7GuEwkmk4AQffc6graKAVLBjwS-_pnazJA/preview" allowfullscreen></iframe>
-      <div class="video-overlay" onclick="this.style.opacity='0'">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <span class="video-label">Scene — She Calmly Says</span>
+    <div class="video-item" id="vi-1P2hQhQP">
+      <div class="video-overlay" onclick="playVideo('1P2hQhQPjI7GuEwkmk4AQffc6graKAVLBjwS-_pnazJA', 'vi-1P2hQhQP')">
+        <img src="https://drive.google.com/thumbnail?id=1P2hQhQPjI7GuEwkmk4AQffc6graKAVLBjwS-_pnazJA&sz=w600" alt="Scene — She Calmly Says" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;" loading="lazy"/>
+        <div class="play-btn" style="position:relative;z-index:2;"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="video-label" style="position:relative;z-index:2;">Scene — She Calmly Says</span>
       </div>
     </div>
   </div>
@@ -693,6 +691,11 @@ footer{
 </footer>
 
 <script>
+function playVideo(fileId, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '<iframe src="https://drive.google.com/file/d/' + fileId + '/preview" style="width:100%;height:100%;border:none;display:block;" allowfullscreen allow="autoplay"></iframe>';
+}
+
 function openLightbox(src){
   document.getElementById('lightbox-img').src = src;
   document.getElementById('lightbox').classList.add('open');
